@@ -1,9 +1,12 @@
 # chat-api
-chat-api application
+This is a simple chat api developed using Flask framework
 
+### Dependencies ###
 
+1) Flask-SQLAlchemy
 
-#.ENV File
+### .ENV File ###
+
     # GENERAL
     SECRET_KEY = 'assap-challenge'
 
