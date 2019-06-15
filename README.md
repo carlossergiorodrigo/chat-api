@@ -53,8 +53,13 @@ It is posible that you need to set it as an executable file first using
     
     > chmod +x start.sh
 
+### Test ###
 
 And that's it... you can start testing the api :)
+
+I create this postman collection that I like to share
+
+    https://www.getpostman.com/collections/8fe6c6ef5a171eb024a4
 
 ## Feedback ##
 Your feedback is always welcome, please write me to my personal email hi@carlosrodrigo.me
