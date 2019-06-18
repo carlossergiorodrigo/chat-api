@@ -1,4 +1,4 @@
-# chat-api
+# CHAT-API
 This is a simple chat api developed using Flask framework
 
 ## Dependencies ##
