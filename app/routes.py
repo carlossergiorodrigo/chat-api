@@ -16,13 +16,13 @@ def check():
     return jsonify(health="ok")
 
 @app.route('/users', methods=['GET', 'POST'])
-def createUser():
+def create_user():
     if request.method == 'POST':
         try:
             request_data = request.get_json(force=True)
             user_schema = UserSchema(strict=True).load(request_data)
         except ValidationError as err:
-            return jsonify(err.messages), 400
+            return jsonify(err.messages), 500
         
         user = UserService.save_user(user_schema.data)
         return jsonify(id=user.id)
@@ -35,7 +35,7 @@ def login():
         request_data = request.get_json(force=True)
         user_schema = UserSchema(strict=True).load(request_data)
     except ValidationError as err:
-        return jsonify(err.messages), 400
+        return jsonify(err.messages), 500
 
     user = UserService.get_user_by_username(user_schema.data.username)
     
@@ -56,7 +56,7 @@ def send_message():
         request_data = request.get_json(force=True)
         message = MessageSchema(strict=True).load(request_data).data
     except ValidationError as err:
-        return jsonify(err.messages), 400
+        return jsonify(err.messages), 500
 
     current_user_id = get_jwt_identity()
 
