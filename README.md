@@ -1,4 +1,4 @@
-# chat-api
+# CHAT-API
 This is a simple chat api developed using Flask framework
 
 ## Dependencies ##
@@ -52,6 +52,11 @@ To start the app and testing the api you can use the script start.sh located in 
 It is posible that you need to set it as an executable file first using 
     
     > chmod +x start.sh
+    
+### Docker ###
+The code also include the dockerfile to run the app in a docker container. If you choose run the app in this way, remember tell to docker the existence of the .env file
+    
+    > docker run --env-file .env --name chat-api -d -p 8080:8080 chat-api
 
 ### Test ###
 
